@@ -1,2 +1,4 @@
 build
 *.pyd
+project_1.cpp
+project_2.cpp
