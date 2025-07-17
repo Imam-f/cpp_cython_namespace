@@ -25,5 +25,5 @@ extensions = [
 
 setup(
     name="CombinedProjects",
-    ext_modules=cythonize(extensions),
+    ext_modules=cythonize(extensions, annotate=True),
 )
