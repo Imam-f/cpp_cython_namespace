@@ -1,5 +1,5 @@
 cimport project_1_cpp
-# cimport cython
+cimport cython
 
 cdef class PyClassFromProject1:
     def __cinit__(self):
@@ -11,25 +11,26 @@ cdef class PyClassFromProject1:
     cpdef void method_in_project1(self):
         self.c_obj.method_in_project1()
 
-# ctypedef fused fuse_a:
-#     int
-#     char
-# 
-# ctypedef fused fuse_b:
-#     int
-#     char
-# 
-# cdef print_one(fuse_a a, fuse_b b):
-#     if fuse_a is int:
-#         return a
-#     else:
-#         return b
-# 
-# cdef int a = 1
-# cdef char b = 'a'
-# cdef c = print_one(a, b)
-# cdef d = print_one(b, a)
-# print(c, cython.typeof(c))
-# print(d, cython.typeof(d))
-# cdef e = print_one(c, d)
-# print(e, cython.typeof(e))
+ctypedef fused fuse_a:
+    int
+    char
+
+ctypedef fused fuse_b:
+    int
+    char
+
+cdef print_one(fuse_a a, fuse_b b):
+    if fuse_a is int:
+        return a
+    else:
+        return b
+
+cdef int a = 1
+cdef char b = 'a'
+cdef c = print_one(a, b)
+cdef d = print_one(b, a)
+print(c, cython.typeof(c))
+print(d, cython.typeof(d))
+cdef e = print_one[int, char](c, d)
+print(e, cython.typeof(e))
+print(e + 10)

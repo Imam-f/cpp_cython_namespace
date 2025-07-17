@@ -1,6 +1,6 @@
 # test.py
-from project_1 import PyClassFromProject1
-from project_2 import PyClassFromProject2
+from src.project_1 import PyClassFromProject1
+from src.project_2 import PyClassFromProject2
 
 # Create instances of the wrapped classes
 obj1 = PyClassFromProject1()

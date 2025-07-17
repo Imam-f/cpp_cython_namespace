@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cython: project_1.pyx</title>
+    <title>Cython: project_2.pyx</title>
     <style type="text/css">
     
 body.cython { font-family: courier; font-size: 12; }
@@ -294,23 +294,24 @@ body.cython { font-family: courier; font-size: 12; }
     <span style="background-color: #FFFF00">Yellow lines</span> hint at Python interaction.<br />
     Click on a line that starts with a "<code>+</code>" to see the C code that Cython generated for it.
 </p>
-<p>Raw output: <a href="project_1.cpp">project_1.cpp</a></p>
-<div class="cython"><pre class="cython line score-8" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">01</span>: cimport project_1_cpp</pre>
+<p>Raw output: <a href="project_2.cpp">project_2.cpp</a></p>
+<div class="cython"><pre class="cython line score-8" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">01</span>: cimport project_1  # Import declarations from project1.pxd</pre>
 <pre class='cython code score-8 '>  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(0);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
   if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_mstate_global-&gt;__pyx_n_u_test, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 1, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: cimport cython</pre>
-<pre class="cython line score-0">&#xA0;<span class="">03</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">04</span>: cdef class PyClassFromProject1:</pre>
-<pre class='cython code score-0 '>struct __pyx_vtabstruct_9project_1_PyClassFromProject1 {
-  void (*method_in_project1)(struct __pyx_obj_9project_1_PyClassFromProject1 *, int __pyx_skip_dispatch);
+</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: cimport project_2_cpp</pre>
+<pre class="cython line score-0">&#xA0;<span class="">03</span>: # cimport project1</pre>
+<pre class="cython line score-0">&#xA0;<span class="">04</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">05</span>: cdef class PyClassFromProject2:</pre>
+<pre class='cython code score-0 '>struct __pyx_vtabstruct_9project_2_PyClassFromProject2 {
+  void (*method_in_project2)(struct __pyx_obj_9project_2_PyClassFromProject2 *, struct __pyx_obj_9project_1_PyClassFromProject1 *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9project_1_PyClassFromProject1 *__pyx_vtabptr_9project_1_PyClassFromProject1;
-</pre><pre class="cython line score-14" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">05</span>:     def __cinit__(self):</pre>
+static struct __pyx_vtabstruct_9project_2_PyClassFromProject2 *__pyx_vtabptr_9project_2_PyClassFromProject2;
+</pre><pre class="cython line score-14" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">06</span>:     def __cinit__(self):</pre>
 <pre class='cython code score-14 '>/* Python wrapper */
-static int __pyx_pw_9project_1_19PyClassFromProject1_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_9project_1_19PyClassFromProject1_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_9project_2_19PyClassFromProject2_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_9project_2_19PyClassFromProject2_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
@@ -326,59 +327,59 @@ static int __pyx_pw_9project_1_19PyClassFromProject1_1__cinit__(PyObject *__pyx_
   const Py_ssize_t __pyx_kwds_len = unlikely(__pyx_kwds) ? <span class='pyx_c_api'>__Pyx_NumKwargs_VARARGS</span>(__pyx_kwds) : 0;
   if (unlikely(__pyx_kwds_len &lt; 0)) return -1;
   if (unlikely(__pyx_kwds_len &gt; 0)) {<span class='pyx_c_api'>__Pyx_RejectKeywords</span>("__cinit__", __pyx_kwds); return -1;}
-  __pyx_r = __pyx_pf_9project_1_19PyClassFromProject1___cinit__(((struct __pyx_obj_9project_1_PyClassFromProject1 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9project_2_19PyClassFromProject2___cinit__(((struct __pyx_obj_9project_2_PyClassFromProject2 *)__pyx_v_self));
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static int __pyx_pf_9project_1_19PyClassFromProject1___cinit__(struct __pyx_obj_9project_1_PyClassFromProject1 *__pyx_v_self) {
+static int __pyx_pf_9project_2_19PyClassFromProject2___cinit__(struct __pyx_obj_9project_2_PyClassFromProject2 *__pyx_v_self) {
   int __pyx_r;
 /* … */
   /* function exit code */
   __pyx_r = 0;
   return __pyx_r;
 }
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">06</span>:         self.c_obj = new project_1_cpp.ClassFromProject1()</pre>
-<pre class='cython code score-0 '>  __pyx_v_self-&gt;c_obj = new Project1Namespace::ClassFromProject1();
-</pre><pre class="cython line score-0">&#xA0;<span class="">07</span>: </pre>
-<pre class="cython line score-2" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">08</span>:     def __dealloc__(self):</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">07</span>:         self.c_obj = new project_2_cpp.ClassFromProject2()</pre>
+<pre class='cython code score-0 '>  __pyx_v_self-&gt;c_obj = new Project2Namespace::ClassFromProject2();
+</pre><pre class="cython line score-0">&#xA0;<span class="">08</span>: </pre>
+<pre class="cython line score-2" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">09</span>:     def __dealloc__(self):</pre>
 <pre class='cython code score-2 '>/* Python wrapper */
-static void __pyx_pw_9project_1_19PyClassFromProject1_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_9project_1_19PyClassFromProject1_3__dealloc__(PyObject *__pyx_v_self) {
+static void __pyx_pw_9project_2_19PyClassFromProject2_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_9project_2_19PyClassFromProject2_3__dealloc__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("__dealloc__ (wrapper)", 0);
   __pyx_kwvalues = <span class='pyx_c_api'>__Pyx_KwValues_VARARGS</span>(__pyx_args, __pyx_nargs);
-  __pyx_pf_9project_1_19PyClassFromProject1_2__dealloc__(((struct __pyx_obj_9project_1_PyClassFromProject1 *)__pyx_v_self));
+  __pyx_pf_9project_2_19PyClassFromProject2_2__dealloc__(((struct __pyx_obj_9project_2_PyClassFromProject2 *)__pyx_v_self));
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
 }
 
-static void __pyx_pf_9project_1_19PyClassFromProject1_2__dealloc__(struct __pyx_obj_9project_1_PyClassFromProject1 *__pyx_v_self) {
+static void __pyx_pf_9project_2_19PyClassFromProject2_2__dealloc__(struct __pyx_obj_9project_2_PyClassFromProject2 *__pyx_v_self) {
 /* … */
   /* function exit code */
 }
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">09</span>:         del self.c_obj</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">10</span>:         del self.c_obj</pre>
 <pre class='cython code score-0 '>  delete __pyx_v_self-&gt;c_obj;
-</pre><pre class="cython line score-0">&#xA0;<span class="">10</span>: </pre>
-<pre class="cython line score-55" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">11</span>:     cpdef void method_in_project1(self):</pre>
-<pre class='cython code score-55 '>static PyObject *__pyx_pw_9project_1_19PyClassFromProject1_5method_in_project1(PyObject *__pyx_v_self, 
+</pre><pre class="cython line score-0">&#xA0;<span class="">11</span>: </pre>
+<pre class="cython line score-65" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">12</span>:     cpdef void method_in_project2(self, project_1.PyClassFromProject1 obj):</pre>
+<pre class='cython code score-65 '>static PyObject *__pyx_pw_9project_2_19PyClassFromProject2_5method_in_project2(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static void __pyx_f_9project_1_19PyClassFromProject1_method_in_project1(struct __pyx_obj_9project_1_PyClassFromProject1 *__pyx_v_self, int __pyx_skip_dispatch) {
+static void __pyx_f_9project_2_19PyClassFromProject2_method_in_project2(struct __pyx_obj_9project_2_PyClassFromProject2 *__pyx_v_self, struct __pyx_obj_9project_1_PyClassFromProject1 *__pyx_v_obj, int __pyx_skip_dispatch) {
   /* Check if called by wrapper */
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (
   #if !CYTHON_USE_TYPE_SLOTS
-  unlikely(Py_TYPE(((PyObject *)__pyx_v_self)) != __pyx_mstate_global-&gt;__pyx_ptype_9project_1_PyClassFromProject1 &amp;&amp;
+  unlikely(Py_TYPE(((PyObject *)__pyx_v_self)) != __pyx_mstate_global-&gt;__pyx_ptype_9project_2_PyClassFromProject2 &amp;&amp;
   <span class='pyx_c_api'>__Pyx_PyType_HasFeature</span>(Py_TYPE(((PyObject *)__pyx_v_self)), Py_TPFLAGS_HAVE_GC))
   #else
   unlikely(Py_TYPE(((PyObject *)__pyx_v_self))-&gt;tp_dictoffset != 0 || <span class='pyx_c_api'>__Pyx_PyType_HasFeature</span>(Py_TYPE(((PyObject *)__pyx_v_self)), (Py_TPFLAGS_IS_ABSTRACT | Py_TPFLAGS_HEAPTYPE)))
@@ -389,9 +390,9 @@ static void __pyx_f_9project_1_19PyClassFromProject1_method_in_project1(struct _
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyObject_GetAttrStr</span>(((PyObject *)__pyx_v_self), __pyx_mstate_global-&gt;__pyx_n_u_method_in_project1);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)</span>
+      __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyObject_GetAttrStr</span>(((PyObject *)__pyx_v_self), __pyx_mstate_global-&gt;__pyx_n_u_method_in_project2);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)</span>
       <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
-      if (!<span class='pyx_c_api'>__Pyx_IsSameCFunction</span>(__pyx_t_1, (void(*)(void)) __pyx_pw_9project_1_19PyClassFromProject1_5method_in_project1)) {
+      if (!<span class='pyx_c_api'>__Pyx_IsSameCFunction</span>(__pyx_t_1, (void(*)(void)) __pyx_pw_9project_2_19PyClassFromProject2_5method_in_project2)) {
         __pyx_t_3 = NULL;
         <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; 
@@ -408,11 +409,11 @@ static void __pyx_f_9project_1_19PyClassFromProject1_method_in_project1(struct _
         }
         #endif
         {
-          PyObject *__pyx_callargs[2] = {__pyx_t_3, NULL};
-          __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FastCall</span>(__pyx_t_4, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+          PyObject *__pyx_callargs[2] = {__pyx_t_3, ((PyObject *)__pyx_v_obj)};
+          __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FastCall</span>(__pyx_t_4, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
           <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
           <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-          if (unlikely(!__pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L1_error)</span>
+          if (unlikely(!__pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L1_error)</span>
           <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
         }
         <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
@@ -439,34 +440,35 @@ static void __pyx_f_9project_1_19PyClassFromProject1_method_in_project1(struct _
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("project_1.PyClassFromProject1.method_in_project1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("project_2.PyClassFromProject2.method_in_project2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_L0:;
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9project_1_19PyClassFromProject1_5method_in_project1(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_9project_2_19PyClassFromProject2_5method_in_project2(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_9project_1_19PyClassFromProject1_5method_in_project1 = {"method_in_project1", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_9project_1_19PyClassFromProject1_5method_in_project1, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_9project_1_19PyClassFromProject1_5method_in_project1(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_9project_2_19PyClassFromProject2_5method_in_project2 = {"method_in_project2", (PyCFunction)(void(*)(void))(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_9project_2_19PyClassFromProject2_5method_in_project2, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9project_2_19PyClassFromProject2_5method_in_project2(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
+  struct __pyx_obj_9project_1_PyClassFromProject1 *__pyx_v_obj = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
-  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("method_in_project1 (wrapper)", 0);
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("method_in_project2 (wrapper)", 0);
   #if !CYTHON_METH_FASTCALL
   #if CYTHON_ASSUME_SAFE_SIZE
   __pyx_nargs = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
@@ -475,22 +477,74 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   #endif
   __pyx_kwvalues = <span class='pyx_c_api'>__Pyx_KwValues_FASTCALL</span>(__pyx_args, __pyx_nargs);
-  if (unlikely(__pyx_nargs &gt; 0)) { <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("method_in_project1", 1, 0, 0, __pyx_nargs); return NULL; }
-  const Py_ssize_t __pyx_kwds_len = unlikely(__pyx_kwds) ? <span class='pyx_c_api'>__Pyx_NumKwargs_FASTCALL</span>(__pyx_kwds) : 0;
-  if (unlikely(__pyx_kwds_len &lt; 0)) return NULL;
-  if (unlikely(__pyx_kwds_len &gt; 0)) {<span class='pyx_c_api'>__Pyx_RejectKeywords</span>("method_in_project1", __pyx_kwds); return NULL;}
-  __pyx_r = __pyx_pf_9project_1_19PyClassFromProject1_4method_in_project1(((struct __pyx_obj_9project_1_PyClassFromProject1 *)__pyx_v_self));
+  {
+    PyObject ** const __pyx_pyargnames[] = {&amp;__pyx_mstate_global-&gt;__pyx_n_u_obj,0};
+  PyObject* values[1] = {0};
+    const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? <span class='pyx_c_api'>__Pyx_NumKwargs_FASTCALL</span>(__pyx_kwds) : 0;
+    if (unlikely(__pyx_kwds_len) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+    if (__pyx_kwds_len &gt; 0) {
+      switch (__pyx_nargs) {
+        case  1:
+        values[0] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 0);
+        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      const Py_ssize_t kwd_pos_args = __pyx_nargs;
+      if (<span class='pyx_c_api'>__Pyx_ParseKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "method_in_project2", 0) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+      for (Py_ssize_t i = __pyx_nargs; i &lt; 1; i++) {
+        if (unlikely(!values[i])) { <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("method_in_project2", 1, 1, 1, i); <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span> }
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 0);
+      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+    }
+    __pyx_v_obj = ((struct __pyx_obj_9project_1_PyClassFromProject1 *)values[0]);
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("method_in_project2", 1, 1, 1, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  for (Py_ssize_t __pyx_temp=0; __pyx_temp &lt; (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+    Py_XDECREF(values[__pyx_temp]);
+  }
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("project_2.PyClassFromProject2.method_in_project2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!<span class='pyx_c_api'>__Pyx_ArgTypeTest</span>(((PyObject *)__pyx_v_obj), __pyx_mstate_global-&gt;__pyx_ptype_9project_1_PyClassFromProject1, 1, "obj", 0))) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L1_error)</span>
+  __pyx_r = __pyx_pf_9project_2_19PyClassFromProject2_4method_in_project2(((struct __pyx_obj_9project_2_PyClassFromProject2 *)__pyx_v_self), __pyx_v_obj);
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
 
   /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  for (Py_ssize_t __pyx_temp=0; __pyx_temp &lt; (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+    Py_XDECREF(values[__pyx_temp]);
+  }
+  goto __pyx_L7_cleaned_up;
+  __pyx_L0:;
+  for (Py_ssize_t __pyx_temp=0; __pyx_temp &lt; (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+    Py_XDECREF(values[__pyx_temp]);
+  }
+  __pyx_L7_cleaned_up:;
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9project_1_19PyClassFromProject1_4method_in_project1(struct __pyx_obj_9project_1_PyClassFromProject1 *__pyx_v_self) {
+static PyObject *__pyx_pf_9project_2_19PyClassFromProject2_4method_in_project2(struct __pyx_obj_9project_2_PyClassFromProject2 *__pyx_v_self, struct __pyx_obj_9project_1_PyClassFromProject1 *__pyx_v_obj) {
   PyObject *__pyx_r = NULL;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_f_9project_1_19PyClassFromProject1_method_in_project1(__pyx_v_self, 1);<span class='error_goto'> if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 11, __pyx_L1_error)</span>
-  __pyx_t_1 = __Pyx_void_to_None(NULL);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)</span>
+  __pyx_f_9project_2_19PyClassFromProject2_method_in_project2(__pyx_v_self, __pyx_v_obj, 1);<span class='error_goto'> if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L1_error)</span>
+  __pyx_t_1 = __Pyx_void_to_None(NULL);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -499,7 +553,7 @@ static PyObject *__pyx_pf_9project_1_19PyClassFromProject1_4method_in_project1(s
   /* function exit code */
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("project_1.PyClassFromProject1.method_in_project1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("project_2.PyClassFromProject2.method_in_project2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
@@ -507,139 +561,32 @@ static PyObject *__pyx_pf_9project_1_19PyClassFromProject1_4method_in_project1(s
   return __pyx_r;
 }
 /* … */
-  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_9project_1_19PyClassFromProject1_5method_in_project1, __Pyx_CYFUNCTION_CCLASS, __pyx_mstate_global-&gt;__pyx_n_u_PyClassFromProject1_method_in_pr, NULL, __pyx_mstate_global-&gt;__pyx_n_u_project_1, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[0]));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)</span>
+  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_9project_2_19PyClassFromProject2_5method_in_project2, __Pyx_CYFUNCTION_CCLASS, __pyx_mstate_global-&gt;__pyx_n_u_PyClassFromProject2_method_in_pr, NULL, __pyx_mstate_global-&gt;__pyx_n_u_project_2, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[0]));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  if (<span class='pyx_c_api'>__Pyx_SetItemOnTypeDict</span>(__pyx_mstate_global-&gt;__pyx_ptype_9project_1_PyClassFromProject1, __pyx_mstate_global-&gt;__pyx_n_u_method_in_project1, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L1_error)</span>
+  if (<span class='pyx_c_api'>__Pyx_SetItemOnTypeDict</span>(__pyx_mstate_global-&gt;__pyx_ptype_9project_2_PyClassFromProject2, __pyx_mstate_global-&gt;__pyx_n_u_method_in_project2, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">12</span>:         self.c_obj.method_in_project1()</pre>
-<pre class='cython code score-0 '>  __pyx_v_self-&gt;c_obj-&gt;method_in_project1();
-</pre><pre class="cython line score-0">&#xA0;<span class="">13</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">14</span>: ctypedef fused fuse_a:</pre>
-<pre class="cython line score-0">&#xA0;<span class="">15</span>:     int</pre>
-<pre class="cython line score-0">&#xA0;<span class="">16</span>:     char</pre>
-<pre class="cython line score-0">&#xA0;<span class="">17</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">18</span>: ctypedef fused fuse_b:</pre>
-<pre class="cython line score-0">&#xA0;<span class="">19</span>:     int</pre>
-<pre class="cython line score-0">&#xA0;<span class="">20</span>:     char</pre>
-<pre class="cython line score-0">&#xA0;<span class="">21</span>: </pre>
-<pre class="cython line score-3" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">22</span>: cdef print_one(fuse_a a, fuse_b b):</pre>
-<pre class='cython code score-3 '>static PyObject *__pyx_fuse_0_1__pyx_f_9project_1_print_one(int __pyx_v_a, CYTHON_UNUSED char __pyx_v_b) {
-  PyObject *__pyx_r = NULL;
+</pre><pre class="cython line score-2" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">13</span>:         if not isinstance(obj, project_1.PyClassFromProject1):</pre>
+<pre class='cython code score-2 '>  __pyx_t_6 = <span class='pyx_c_api'>__Pyx_TypeCheck</span>(((PyObject *)__pyx_v_obj), __pyx_mstate_global-&gt;__pyx_ptype_9project_1_PyClassFromProject1); 
+  __pyx_t_7 = (!__pyx_t_6);
+  if (unlikely(__pyx_t_7)) {
 /* … */
-  /* function exit code */
-  __pyx_L1_error:;
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("project_1.print_one", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
-  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_fuse_1_0__pyx_f_9project_1_print_one(CYTHON_UNUSED char __pyx_v_a, int __pyx_v_b) {
-  PyObject *__pyx_r = NULL;
-</pre><pre class="cython line score-0">&#xA0;<span class="">23</span>:     if fuse_a is int:</pre>
-<pre class="cython line score-3" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">24</span>:         return a</pre>
-<pre class='cython code score-3 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyLong_From_int</span>(__pyx_v_a);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">25</span>:     else:</pre>
-<pre class="cython line score-3" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">26</span>:         return b</pre>
-<pre class='cython code score-3 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyLong_From_int</span>(__pyx_v_b);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">27</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">28</span>: cdef int a = 1</pre>
-<pre class='cython code score-0 '>  __pyx_v_9project_1_a = 1;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">29</span>: cdef char b = 'a'</pre>
-<pre class='cython code score-0 '>  __pyx_v_9project_1_b = 'a';
-</pre><pre class="cython line score-1" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">30</span>: cdef c = print_one(a, b)</pre>
-<pre class='cython code score-1 '>  __pyx_t_2 = __pyx_fuse_0_1__pyx_f_9project_1_print_one(__pyx_v_9project_1_a, __pyx_v_9project_1_b);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 30, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  <span class='refnanny'>__Pyx_XGOTREF</span>(__pyx_v_9project_1_c);
-  <span class='pyx_macro_api'>__Pyx_DECREF_SET</span>(__pyx_v_9project_1_c, __pyx_t_2);
-  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_t_2);
-  __pyx_t_2 = 0;
-</pre><pre class="cython line score-1" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">31</span>: cdef d = print_one(b, a)</pre>
-<pre class='cython code score-1 '>  __pyx_t_2 = __pyx_fuse_1_0__pyx_f_9project_1_print_one(__pyx_v_9project_1_b, __pyx_v_9project_1_a);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  <span class='refnanny'>__Pyx_XGOTREF</span>(__pyx_v_9project_1_d);
-  <span class='pyx_macro_api'>__Pyx_DECREF_SET</span>(__pyx_v_9project_1_d, __pyx_t_2);
-  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_t_2);
-  __pyx_t_2 = 0;
-</pre><pre class="cython line score-6" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">32</span>: print(c, cython.typeof(c))</pre>
-<pre class='cython code score-6 '>  __pyx_t_3 = NULL;
-  <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_builtin_print);
-  __pyx_t_4 = __pyx_builtin_print; 
-  __pyx_t_5 = 1;
-  {
-    PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_9project_1_c, __pyx_mstate_global-&gt;__pyx_kp_u_Python_object};
-    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FastCall</span>(__pyx_t_4, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-    <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
-    <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 32, __pyx_L1_error)</span>
-    <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
   }
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-6" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">33</span>: print(d, cython.typeof(d))</pre>
-<pre class='cython code score-6 '>  __pyx_t_4 = NULL;
-  <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_builtin_print);
-  __pyx_t_3 = __pyx_builtin_print; 
-  __pyx_t_5 = 1;
-  {
-    PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_v_9project_1_d, __pyx_mstate_global-&gt;__pyx_kp_u_Python_object};
-    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FastCall</span>(__pyx_t_3, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-    <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-    <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 33, __pyx_L1_error)</span>
-    <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  }
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-15" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">34</span>: cdef e = print_one[int, char](c, d)</pre>
-<pre class='cython code score-15 '>  __pyx_t_6 = <span class='pyx_c_api'>__Pyx_PyLong_As_int</span>(__pyx_v_9project_1_c); if (unlikely((__pyx_t_6 == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 34, __pyx_L1_error)</span>
-  __pyx_t_7 = <span class='pyx_c_api'>__Pyx_PyLong_As_char</span>(__pyx_v_9project_1_d); if (unlikely((__pyx_t_7 == (char)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 34, __pyx_L1_error)</span>
-  __pyx_t_2 = __pyx_fuse_0_1__pyx_f_9project_1_print_one(__pyx_t_6, __pyx_t_7);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  <span class='refnanny'>__Pyx_XGOTREF</span>(__pyx_v_9project_1_e);
-  <span class='pyx_macro_api'>__Pyx_DECREF_SET</span>(__pyx_v_9project_1_e, __pyx_t_2);
-  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_t_2);
-  __pyx_t_2 = 0;
-</pre><pre class="cython line score-6" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">35</span>: print(e, cython.typeof(e))</pre>
-<pre class='cython code score-6 '>  __pyx_t_3 = NULL;
-  <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_builtin_print);
-  __pyx_t_4 = __pyx_builtin_print; 
-  __pyx_t_5 = 1;
-  {
-    PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_v_9project_1_e, __pyx_mstate_global-&gt;__pyx_kp_u_Python_object};
-    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FastCall</span>(__pyx_t_4, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-    <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
-    <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 35, __pyx_L1_error)</span>
-    <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  }
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-9" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">36</span>: print(e + 10)</pre>
-<pre class='cython code score-9 '>  __pyx_t_4 = NULL;
-  <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_builtin_print);
-  __pyx_t_3 = __pyx_builtin_print; 
-  __pyx_t_8 = <span class='pyx_c_api'>__Pyx_PyLong_AddObjC</span>(__pyx_v_9project_1_e, __pyx_mstate_global-&gt;__pyx_int_10, 10, 0, 0);<span class='error_goto'> if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 36, __pyx_L1_error)</span>
-  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_8);
-  __pyx_t_5 = 1;
-  {
-    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_8};
-    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_FastCall</span>(__pyx_t_3, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-    <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-    <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_8); __pyx_t_8 = 0;
-    <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 36, __pyx_L1_error)</span>
-    <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  }
-  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
+</pre><pre class="cython line score-8" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">14</span>:             raise TypeError("Expected a PyClassFromProject1 instance")</pre>
+<pre class='cython code score-8 '>    __pyx_t_2 = NULL;
+    <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_builtin_TypeError);
+    __pyx_t_4 = __pyx_builtin_TypeError; 
+    __pyx_t_5 = 1;
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_mstate_global-&gt;__pyx_kp_u_Expected_a_PyClassFromProject1_i};
+      __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyObject_FastCall</span>(__pyx_t_4, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
+      <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
+      if (unlikely(!__pyx_t_1)) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L1_error)</span>
+      <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
+    }
+    <span class='pyx_c_api'>__Pyx_Raise</span>(__pyx_t_1, 0, 0, 0);
+    <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_1); __pyx_t_1 = 0;
+    <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L1_error)</span>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">15</span>:         self.c_obj.method_in_project2(obj.c_obj)</pre>
+<pre class='cython code score-0 '>  __pyx_v_self-&gt;c_obj-&gt;method_in_project2(__pyx_v_obj-&gt;c_obj);
 </pre></div></body></html>

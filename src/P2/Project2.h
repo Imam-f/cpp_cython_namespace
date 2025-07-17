@@ -2,7 +2,7 @@
 #ifndef PROJECT2_H
 #define PROJECT2_H
 
-#include "Project1.h"  // Include Project1's header
+#include "../P1/Project1.h"  // Include Project1's header
 
 namespace Project2Namespace {
 
